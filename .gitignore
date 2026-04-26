@@ -1,0 +1,11 @@
+build/
+build_tmp/
+tmp/
+ginkgo/
+kokkos/
+kokkos-kernels/
+install/
+*.ncu-rep
+*.nsys-rep
+__pycache__/
+*.pyc

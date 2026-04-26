@@ -1,0 +1,8 @@
+/root/bsa_spmm_modi_2/data/dlmc/rn50/magnitude_pruning/0.7/bottleneck_1_block_group_projection_block_group4.smtx
+/root/bsa_spmm_modi_2/data/dlmc/rn50/random_pruning/0.7/bottleneck_1_block_group_projection_block_group4.smtx
+/root/bsa_spmm_modi_2/data/dlmc/rn50/random_pruning/0.7/bottleneck_1_block_group_projection_block_group3.smtx
+/root/bsa_spmm_modi_2/data/dlmc/rn50/magnitude_pruning/0.7/bottleneck_1_block_group_projection_block_group3.smtx
+/root/bsa_spmm_modi_2/data/dlmc/rn50/random_pruning/0.7/bottleneck_1_block_group_projection_block_group2.smtx
+/root/bsa_spmm_modi_2/data/dlmc/rn50/variational_dropout/0.95/bottleneck_1_block_group_projection_block_group2.smtx
+
+

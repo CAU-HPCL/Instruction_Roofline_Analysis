@@ -1,0 +1,6 @@
+==PROF== Connected to process 3485639 (/root/ICTC/Roofline/hello_world)
+==PROF== Disconnected from process 3485639
+"ID","Process ID","Process Name","Host Name","Kernel Name","Context","Stream","Block Size","Grid Size","Device","CC","Section Name","Metric Name","Metric Unit","Metric Value"
+"0","3485639","hello_world","127.0.0.1","helloWorldKernel()","1","7","(1, 1, 1)","(1, 1, 1)","0","8.9","Command line profiler metrics","dram__throughput.avg.pct_of_peak_sustained_elapsed.max_rate","","n/a"
+"0","3485639","hello_world","127.0.0.1","helloWorldKernel()","1","7","(1, 1, 1)","(1, 1, 1)","0","8.9","Command line profiler metrics","l1tex__throughput.avg.pct_of_peak_sustained_elapsed.max_rate","","n/a"
+"0","3485639","hello_world","127.0.0.1","helloWorldKernel()","1","7","(1, 1, 1)","(1, 1, 1)","0","8.9","Command line profiler metrics","lts__throughput.avg.pct_of_peak_sustained_elapsed.max_rate","","n/a"
