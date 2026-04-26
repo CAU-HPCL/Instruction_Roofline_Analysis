@@ -68,9 +68,9 @@ int main(int argc, char *argv[])
 
     option.n_cols = 128;
 
-    option.input_filename = "/workspace/TC_BELL/TC-BELL/dataset/DLMC/dlmc/rn50/magnitude_pruning/0.7/bottleneck_1_block_group_projection_block_group4.smtx";
-    // option.input_filename = "/workspace/TC_BELL/TC-BELL/dataset/DLMC/dlmc/rn50/random_pruning/0.7/bottleneck_1_block_group_projection_block_group3.smtx";
-    // option.input_filename = "/workspace/TC_BELL/TC-BELL/dataset/DLMC/dlmc/rn50/random_pruning/0.7/bottleneck_1_block_group_projection_block_group2.smtx";
+    option.input_filename = "../../dataset/bottleneck_1_block_group_projection_block_group4.smtx";
+    // option.input_filename = "../../dataset/bottleneck_1_block_group_projection_block_group3.smtx";
+    // option.input_filename = "../../dataset/bottleneck_1_block_group_projection_block_group2.smtx";
 
     option.output_filename = "/workspace/ICTC/tmp/cuSPARSE_results.csv";
 
