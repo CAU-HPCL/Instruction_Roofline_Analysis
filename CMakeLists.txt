@@ -207,10 +207,8 @@ find_library(NVTOOLSEXT nvToolsExt
   REQUIRED)
 
 add_executable(spmm_all
-  # src/main.cu
   src/cuSPARSE_main.cu
-  # src/Ginkgo_main.cu
-  /workspace/TC_BELL/TC-BELL/src/external/BSA-SpMM/src/matrices.cpp
+  src/external/BSA-SpMM/src/matrices.cpp
 )
 
 target_link_libraries(spmm_all PRIVATE
@@ -225,12 +223,9 @@ target_link_libraries(spmm_all PRIVATE
 
 # (선택) include path 수동 추가
 target_include_directories(spmm_all PRIVATE
-  # "$ENV{KOKKOS_PREFIX}/include"
-  # "$ENV{KOKKOSKERNELS_PREFIX}/include"
   "$ENV{GKO_PREFIX}/include"
-  "/workspace/ICTC/include"
-  "/workspace/TC_BELL/TC-BELL/src/external/BSA-SpMM/include"
-  "/workspace/TC_BELL/TC-BELL/include"
+  "include"
+  "src/external/BSA-SpMM/include"
 )
 
 # ── RPATH (LD_LIBRARY_PATH 없이 실행)
