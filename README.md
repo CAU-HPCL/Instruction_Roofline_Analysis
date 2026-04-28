@@ -36,7 +36,7 @@ This project implements the Instruction Roofline model proposed by Ding & Willia
 ![cuSPARSE Roofline](figure/Instruction_Roofline.png)
 
 ### Axes
-- **X-axis**: Arithmetic Intensity (AI) — instructions per transaction [inst/TXN]
+- **X-axis**: Instruction Intensity — instructions per transaction [inst/TXN]
 - **Y-axis**: Achieved throughput [GIPS] (Giga Instructions Per Second)
 
 ### Ceilings
@@ -53,18 +53,18 @@ All transactions are normalized to 32B sectors:
 - L2: `lts__t_sectors` (32B/sector, ×1)
 - DRAM: `dram__sectors` (32B/sector, ×1)
 
-- L1 AI is computed as: tx_l1 = global_sectors + 4 × shared_wavefronts
+- L1 Instruction Intensity is computed as: tx_l1 = global_sectors + 4 × shared_wavefronts
 
 ### Data points
-- **Solid dot**: total instruction throughput vs. memory-level AI
-- **Open dot**: global ld/st instruction throughput vs. L1 AI — indicates global memory access pattern efficiency
+- **Solid dot**: total instruction throughput vs. memory-level Instruction Intensity
+- **Open dot**: global ld/st instruction throughput vs. L1 Instruction Intensity — indicates global memory access pattern efficiency
 - **Dashed line**: warp-level throughput — gap with solid dot indicates thread predication
 
 ### global Memory walls
-Vertical lines indicate theoretical AI bounds for different access patterns (float32):
-- **Stride-0**: all threads access same address (AI = 1.0)
-- **Stride-1**: coalesced access (AI = 0.25)
-- **Stride-8**: strided access (AI = 0.03125)
+Vertical lines indicate theoretical Instruction Intensity bounds for different access patterns (float32):
+- **Stride-0**: all threads access same address (Instruction Intensity = 1.0)
+- **Stride-1**: coalesced access (Instruction Intensity = 0.25)
+- **Stride-8**: strided access (Instruction Intensity = 0.03125)
 
 ---
 
