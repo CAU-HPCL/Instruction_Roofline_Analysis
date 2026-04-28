@@ -57,7 +57,7 @@ All transactions are normalized to 32B sectors:
 
 ### Data points
 - **Solid dot**: total instruction throughput vs. memory-level AI
-- **Open dot**: global ld/st instruction throughput vs. L1 AI — indicates memory access pattern efficiency
+- **Open dot**: global ld/st instruction throughput vs. L1 AI — indicates global memory access pattern efficiency
 - **Dashed line**: warp-level throughput — gap with solid dot indicates thread predication
 
 ### global Memory walls
@@ -77,7 +77,6 @@ Hardware ceilings are based on measured values from Luo et al. (arXiv:2402.13499
 | L1 bandwidth | 121.2 B/clk/SM (FP32.v4) | Table V |
 | L2 bandwidth | 1708.0 B/clk (FP32.v4) | Table V |
 | DRAM bandwidth | 1008 GB/s | Official spec |
-| Transaction size | 32B (unified) | Ding & Williams (2019) |
 | Compute peak | 128 SM × 4 schedulers × 2.52 GHz | Official spec |
  
 Metrics collected via Nsight Compute:
@@ -133,7 +132,7 @@ python3 ./Roofline/draw_Roofline.py
 - **L2-bound** — L2 triangles (▲) are located near the L2 ceiling
 - **Minimal L1 cache reuse** — L1 (●) and L2 (▲) points are nearly overlapping
 - **Effective L2 reuse** — large gap between L2 (▲) and DRAM (■)
-- **Efficient memory access pattern** — open dots (global ld/st only) are located near Stride-0 wall, indicating near unit-stride access
+- **Efficient memory access pattern** — open dots (global ld/st only) are located near Stride-1 wall, indicating near unit-stride access
 - **No thread predication** — warp-level throughput line and thread-level points nearly coincide
 - **No shared memory usage**
 ### Ginkgo SpMM (CSR)
