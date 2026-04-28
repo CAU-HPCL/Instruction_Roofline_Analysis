@@ -149,9 +149,28 @@ python3 ./Roofline/draw_Roofline.py
 - **Slight thread predication** — small gap between warp-level throughput line and thread-level points
 - **No shared memory usage**
 ---
- 
 
-## 7. References
+## 7. Optimization Implications
+
+| Observation | Possible Cause | Possible Optimization Direction |
+|---|---|---|
+| L1/L2 transaction-side bottleneck | Inefficient global memory access pattern | Improve data layout, row grouping, or workload mapping |
+| Open ld/st points away from unit-stride | Non-coalesced or irregular access | Reorder rows, change sparse format, improve dense matrix access locality |
+| Lower instruction throughput | Instruction overhead or dependency stalls | Reduce index computation, specialize kernels, improve scheduling |
+| Predication observed | Branching or workload imbalance | Reduce divergence, improve row/warp assignment |
+
+---
+
+## 8. Limitations
+
+- This analysis is based on three sparse matrices and should not be interpreted as a universal ranking of cuSPARSE and Ginkgo.
+- The current study focuses on CSR SpMM on RTX 4090. Results may differ for other sparse formats, matrix distributions, dense matrix widths, and GPU architectures.
+- Instruction Roofline is a compact visual model and does not replace full microarchitectural profiling.
+- The interpretation depends on correct Nsight Compute metric selection, transaction definitions, and architecture-specific ceiling values.
+
+---
+
+## 9. References
  
 - Nan Ding, Samuel Williams. "An Instruction Roofline Model for GPUs." IPDPSW, 2019.
 - Weile Luo et al. "Benchmarking and Dissecting the Nvidia Hopper GPU Architecture." arXiv:2402.13499, 2024.
