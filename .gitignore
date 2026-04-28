@@ -11,8 +11,9 @@ __pycache__/
 *.pyc
 Roofline_tmp/
 dataset/
-proflie/
 results/
 result/
 metric_descriptions.txt
 run.txt
+profile/
+figure/
