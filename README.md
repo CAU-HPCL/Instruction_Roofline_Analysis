@@ -116,8 +116,11 @@ cd Instruction_Roofline_Analysis
  
 # 5. Run experiment (collect ncu metrics)
 /bin/bash experiment.sh
- 
-# 6. Draw Roofline
+
+#6. Insert Kernel runtime
+Insert kernel runtime(result/*_results.csv) measured by experiment.sh into Roofline/draw_Roofline.py
+
+# 7. Draw Roofline
 python3 ./Roofline/draw_Roofline.py
 ```
  
