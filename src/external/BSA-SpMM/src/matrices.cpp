@@ -1,7 +1,11 @@
+
+// Modified from original BSA-SpMM (Euro-PAR 2024)
+// Original: https://doi.org/10.5281/zenodo.11579181
+// Changes: Fixed MTX file parsing for certain matrix formats
+
+
 #include "matrices.h"
 #include <utility>
-
-
 
     // void CSR::read_from_mtx(std::ifstream &fin, Option option, bool zero_base)
     // {

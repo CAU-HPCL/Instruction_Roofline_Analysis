@@ -1,0 +1,35 @@
+Validation successful!
+
+===========================
+Input File: ./dataset/bottleneck_1_block_group_projection_block_group2.smtx
+Output File: result/cuSPARSE_results.csv
+Repetitions: 10
+M, N, K: 128, 128, 256
+Density: 0.299988
+NNZ: 9830
+MU: 76.7969
+MAX: 94
+STD_NNZ: 7.49307
+MAX_MU: 17.2031
+AVE_BW: 249
+STD_BW: 4.86216
+
+===========================
+cuSPARSE Time: 0.0098304 seconds
+cuSPARSE Error: 0
+cuSPARSE Result: SUCCESS
+
+===========================
+Ginkgo Time: 0 seconds
+Ginkgo Error: 0
+Ginkgo Result: SUCCESS
+
+===========================
+Kokkos Time: 0 seconds
+Kokkos Error: 0
+Kokkos Result: SUCCESS
+
+===========================
+Winner: Ginkgo
+Winner Time: 0 seconds
+===========================

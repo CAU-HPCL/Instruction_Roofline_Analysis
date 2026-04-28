@@ -1,2 +1,0 @@
-==WARNING== --details-all option is deprecated. Please switch to --print-details option.
-==ERROR== Invalid chip sm_89

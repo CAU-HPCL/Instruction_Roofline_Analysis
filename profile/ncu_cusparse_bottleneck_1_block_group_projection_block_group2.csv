@@ -1,0 +1,80 @@
+==PROF== Connected to process 3416815 (/home/inseo764/instruction-roofline-spmm/build/NCU_spmm_cuSPARSE)
+Validation successful!
+
+===========================
+Input File: ./dataset/bottleneck_1_block_group_projection_block_group2.smtx
+Output File: result/cuSPARSE_results.csv
+Repetitions: 0
+M, N, K: 128, 128, 256
+Density: 0.299988
+NNZ: 9830
+MU: 76.7969
+MAX: 94
+STD_NNZ: 7.49307
+MAX_MU: 17.2031
+AVE_BW: 249
+STD_BW: 4.86216
+
+===========================
+cuSPARSE Time: inf seconds
+cuSPARSE Error: 0
+cuSPARSE Result: SUCCESS
+
+===========================
+Ginkgo Time: 0 seconds
+Ginkgo Error: 0
+Ginkgo Result: SUCCESS
+
+===========================
+Kokkos Time: 0 seconds
+Kokkos Error: 0
+Kokkos Result: SUCCESS
+
+===========================
+Winner: Ginkgo
+Winner Time: 0 seconds
+===========================
+==PROF== Disconnected from process 3416815
+"ID","Process ID","Process Name","Host Name","Kernel Name","Context","Stream","Block Size","Grid Size","Device","CC","Section Name","Metric Name","Metric Unit","Metric Value"
+"0","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void matrix_scalar_multiply_kernel<MatrixWiseMulPolicy, 1, long, float, float>(T3, T3, T3, KernelCoeff<T4>, T5 *)","1","7","(32, 4, 1)","(1, 32, 1)","0","8.9","Command line profiler metrics","dram__sectors_read.sum","sector","284"
+"0","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void matrix_scalar_multiply_kernel<MatrixWiseMulPolicy, 1, long, float, float>(T3, T3, T3, KernelCoeff<T4>, T5 *)","1","7","(32, 4, 1)","(1, 32, 1)","0","8.9","Command line profiler metrics","dram__sectors_write.sum","sector","0"
+"0","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void matrix_scalar_multiply_kernel<MatrixWiseMulPolicy, 1, long, float, float>(T3, T3, T3, KernelCoeff<T4>, T5 *)","1","7","(32, 4, 1)","(1, 32, 1)","0","8.9","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum","","0"
+"0","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void matrix_scalar_multiply_kernel<MatrixWiseMulPolicy, 1, long, float, float>(T3, T3, T3, KernelCoeff<T4>, T5 *)","1","7","(32, 4, 1)","(1, 32, 1)","0","8.9","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum","","0"
+"0","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void matrix_scalar_multiply_kernel<MatrixWiseMulPolicy, 1, long, float, float>(T3, T3, T3, KernelCoeff<T4>, T5 *)","1","7","(32, 4, 1)","(1, 32, 1)","0","8.9","Command line profiler metrics","l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum","sector","0"
+"0","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void matrix_scalar_multiply_kernel<MatrixWiseMulPolicy, 1, long, float, float>(T3, T3, T3, KernelCoeff<T4>, T5 *)","1","7","(32, 4, 1)","(1, 32, 1)","0","8.9","Command line profiler metrics","l1tex__t_sectors_pipe_lsu_mem_global_op_st.sum","sector","2,048"
+"0","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void matrix_scalar_multiply_kernel<MatrixWiseMulPolicy, 1, long, float, float>(T3, T3, T3, KernelCoeff<T4>, T5 *)","1","7","(32, 4, 1)","(1, 32, 1)","0","8.9","Command line profiler metrics","lts__t_sectors_op_read.sum","sector","3,286"
+"0","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void matrix_scalar_multiply_kernel<MatrixWiseMulPolicy, 1, long, float, float>(T3, T3, T3, KernelCoeff<T4>, T5 *)","1","7","(32, 4, 1)","(1, 32, 1)","0","8.9","Command line profiler metrics","lts__t_sectors_op_write.sum","sector","2,152"
+"0","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void matrix_scalar_multiply_kernel<MatrixWiseMulPolicy, 1, long, float, float>(T3, T3, T3, KernelCoeff<T4>, T5 *)","1","7","(32, 4, 1)","(1, 32, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed.sum","inst","17,536"
+"0","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void matrix_scalar_multiply_kernel<MatrixWiseMulPolicy, 1, long, float, float>(T3, T3, T3, KernelCoeff<T4>, T5 *)","1","7","(32, 4, 1)","(1, 32, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed_op_global_ld.sum","inst","0"
+"0","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void matrix_scalar_multiply_kernel<MatrixWiseMulPolicy, 1, long, float, float>(T3, T3, T3, KernelCoeff<T4>, T5 *)","1","7","(32, 4, 1)","(1, 32, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed_op_global_st.sum","inst","256"
+"0","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void matrix_scalar_multiply_kernel<MatrixWiseMulPolicy, 1, long, float, float>(T3, T3, T3, KernelCoeff<T4>, T5 *)","1","7","(32, 4, 1)","(1, 32, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed_op_shared_ld.sum","inst","0"
+"0","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void matrix_scalar_multiply_kernel<MatrixWiseMulPolicy, 1, long, float, float>(T3, T3, T3, KernelCoeff<T4>, T5 *)","1","7","(32, 4, 1)","(1, 32, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed_op_shared_st.sum","inst","0"
+"0","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void matrix_scalar_multiply_kernel<MatrixWiseMulPolicy, 1, long, float, float>(T3, T3, T3, KernelCoeff<T4>, T5 *)","1","7","(32, 4, 1)","(1, 32, 1)","0","8.9","Command line profiler metrics","smsp__thread_inst_executed.sum","inst","561,152"
+"1","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_partition_kernel<128, int, int>(const T3 *, T2, T3, T3, int, T2 *)","1","7","(128, 1, 1)","(4, 1, 1)","0","8.9","Command line profiler metrics","dram__sectors_read.sum","sector","132"
+"1","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_partition_kernel<128, int, int>(const T3 *, T2, T3, T3, int, T2 *)","1","7","(128, 1, 1)","(4, 1, 1)","0","8.9","Command line profiler metrics","dram__sectors_write.sum","sector","0"
+"1","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_partition_kernel<128, int, int>(const T3 *, T2, T3, T3, int, T2 *)","1","7","(128, 1, 1)","(4, 1, 1)","0","8.9","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum","","0"
+"1","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_partition_kernel<128, int, int>(const T3 *, T2, T3, T3, int, T2 *)","1","7","(128, 1, 1)","(4, 1, 1)","0","8.9","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum","","0"
+"1","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_partition_kernel<128, int, int>(const T3 *, T2, T3, T3, int, T2 *)","1","7","(128, 1, 1)","(4, 1, 1)","0","8.9","Command line profiler metrics","l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum","sector","150"
+"1","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_partition_kernel<128, int, int>(const T3 *, T2, T3, T3, int, T2 *)","1","7","(128, 1, 1)","(4, 1, 1)","0","8.9","Command line profiler metrics","l1tex__t_sectors_pipe_lsu_mem_global_op_st.sum","sector","52"
+"1","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_partition_kernel<128, int, int>(const T3 *, T2, T3, T3, int, T2 *)","1","7","(128, 1, 1)","(4, 1, 1)","0","8.9","Command line profiler metrics","lts__t_sectors_op_read.sum","sector","1,361"
+"1","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_partition_kernel<128, int, int>(const T3 *, T2, T3, T3, int, T2 *)","1","7","(128, 1, 1)","(4, 1, 1)","0","8.9","Command line profiler metrics","lts__t_sectors_op_write.sum","sector","189"
+"1","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_partition_kernel<128, int, int>(const T3 *, T2, T3, T3, int, T2 *)","1","7","(128, 1, 1)","(4, 1, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed.sum","inst","1,262"
+"1","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_partition_kernel<128, int, int>(const T3 *, T2, T3, T3, int, T2 *)","1","7","(128, 1, 1)","(4, 1, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed_op_global_ld.sum","inst","93"
+"1","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_partition_kernel<128, int, int>(const T3 *, T2, T3, T3, int, T2 *)","1","7","(128, 1, 1)","(4, 1, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed_op_global_st.sum","inst","13"
+"1","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_partition_kernel<128, int, int>(const T3 *, T2, T3, T3, int, T2 *)","1","7","(128, 1, 1)","(4, 1, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed_op_shared_ld.sum","inst","0"
+"1","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_partition_kernel<128, int, int>(const T3 *, T2, T3, T3, int, T2 *)","1","7","(128, 1, 1)","(4, 1, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed_op_shared_st.sum","inst","0"
+"1","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_partition_kernel<128, int, int>(const T3 *, T2, T3, T3, int, T2 *)","1","7","(128, 1, 1)","(4, 1, 1)","0","8.9","Command line profiler metrics","smsp__thread_inst_executed.sum","inst","39,252"
+"2","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_kernel<CsrMMPolicy<int, float, float, float>, 0, 0, 0, int, int, int, int, float, float, float>(T5, T5, T6, T5, int, int, KernelCoeffs<T11>, int, int, const T5 *, const T8 *, const T7 *, const T9 *, long, const T9 *, T5, long, T10 *, T5, long)","1","7","(128, 1, 1)","(103, 1, 1)","0","8.9","Command line profiler metrics","dram__sectors_read.sum","sector","9,268"
+"2","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_kernel<CsrMMPolicy<int, float, float, float>, 0, 0, 0, int, int, int, int, float, float, float>(T5, T5, T6, T5, int, int, KernelCoeffs<T11>, int, int, const T5 *, const T8 *, const T7 *, const T9 *, long, const T9 *, T5, long, T10 *, T5, long)","1","7","(128, 1, 1)","(103, 1, 1)","0","8.9","Command line profiler metrics","dram__sectors_write.sum","sector","0"
+"2","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_kernel<CsrMMPolicy<int, float, float, float>, 0, 0, 0, int, int, int, int, float, float, float>(T5, T5, T6, T5, int, int, KernelCoeffs<T11>, int, int, const T5 *, const T8 *, const T7 *, const T9 *, long, const T9 *, T5, long, T10 *, T5, long)","1","7","(128, 1, 1)","(103, 1, 1)","0","8.9","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum","","0"
+"2","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_kernel<CsrMMPolicy<int, float, float, float>, 0, 0, 0, int, int, int, int, float, float, float>(T5, T5, T6, T5, int, int, KernelCoeffs<T11>, int, int, const T5 *, const T8 *, const T7 *, const T9 *, long, const T9 *, T5, long, T10 *, T5, long)","1","7","(128, 1, 1)","(103, 1, 1)","0","8.9","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum","","0"
+"2","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_kernel<CsrMMPolicy<int, float, float, float>, 0, 0, 0, int, int, int, int, float, float, float>(T5, T5, T6, T5, int, int, KernelCoeffs<T11>, int, int, const T5 *, const T8 *, const T7 *, const T9 *, long, const T9 *, T5, long, T10 *, T5, long)","1","7","(128, 1, 1)","(103, 1, 1)","0","8.9","Command line profiler metrics","l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum","sector","161,998"
+"2","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_kernel<CsrMMPolicy<int, float, float, float>, 0, 0, 0, int, int, int, int, float, float, float>(T5, T5, T6, T5, int, int, KernelCoeffs<T11>, int, int, const T5 *, const T8 *, const T7 *, const T9 *, long, const T9 *, T5, long, T10 *, T5, long)","1","7","(128, 1, 1)","(103, 1, 1)","0","8.9","Command line profiler metrics","l1tex__t_sectors_pipe_lsu_mem_global_op_st.sum","sector","0"
+"2","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_kernel<CsrMMPolicy<int, float, float, float>, 0, 0, 0, int, int, int, int, float, float, float>(T5, T5, T6, T5, int, int, KernelCoeffs<T11>, int, int, const T5 *, const T8 *, const T7 *, const T9 *, long, const T9 *, T5, long, T10 *, T5, long)","1","7","(128, 1, 1)","(103, 1, 1)","0","8.9","Command line profiler metrics","lts__t_sectors_op_read.sum","sector","157,911"
+"2","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_kernel<CsrMMPolicy<int, float, float, float>, 0, 0, 0, int, int, int, int, float, float, float>(T5, T5, T6, T5, int, int, KernelCoeffs<T11>, int, int, const T5 *, const T8 *, const T7 *, const T9 *, long, const T9 *, T5, long, T10 *, T5, long)","1","7","(128, 1, 1)","(103, 1, 1)","0","8.9","Command line profiler metrics","lts__t_sectors_op_write.sum","sector","158"
+"2","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_kernel<CsrMMPolicy<int, float, float, float>, 0, 0, 0, int, int, int, int, float, float, float>(T5, T5, T6, T5, int, int, KernelCoeffs<T11>, int, int, const T5 *, const T8 *, const T7 *, const T9 *, long, const T9 *, T5, long, T10 *, T5, long)","1","7","(128, 1, 1)","(103, 1, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed.sum","inst","294,232"
+"2","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_kernel<CsrMMPolicy<int, float, float, float>, 0, 0, 0, int, int, int, int, float, float, float>(T5, T5, T6, T5, int, int, KernelCoeffs<T11>, int, int, const T5 *, const T8 *, const T7 *, const T9 *, long, const T9 *, T5, long, T10 *, T5, long)","1","7","(128, 1, 1)","(103, 1, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed_op_global_ld.sum","inst","41,370"
+"2","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_kernel<CsrMMPolicy<int, float, float, float>, 0, 0, 0, int, int, int, int, float, float, float>(T5, T5, T6, T5, int, int, KernelCoeffs<T11>, int, int, const T5 *, const T8 *, const T7 *, const T9 *, long, const T9 *, T5, long, T10 *, T5, long)","1","7","(128, 1, 1)","(103, 1, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed_op_global_st.sum","inst","0"
+"2","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_kernel<CsrMMPolicy<int, float, float, float>, 0, 0, 0, int, int, int, int, float, float, float>(T5, T5, T6, T5, int, int, KernelCoeffs<T11>, int, int, const T5 *, const T8 *, const T7 *, const T9 *, long, const T9 *, T5, long, T10 *, T5, long)","1","7","(128, 1, 1)","(103, 1, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed_op_shared_ld.sum","inst","0"
+"2","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_kernel<CsrMMPolicy<int, float, float, float>, 0, 0, 0, int, int, int, int, float, float, float>(T5, T5, T6, T5, int, int, KernelCoeffs<T11>, int, int, const T5 *, const T8 *, const T7 *, const T9 *, long, const T9 *, T5, long, T10 *, T5, long)","1","7","(128, 1, 1)","(103, 1, 1)","0","8.9","Command line profiler metrics","smsp__inst_executed_op_shared_st.sum","inst","0"
+"2","3416815","NCU_spmm_cuSPARSE","127.0.0.1","void csrmm_alg2_kernel<CsrMMPolicy<int, float, float, float>, 0, 0, 0, int, int, int, int, float, float, float>(T5, T5, T6, T5, int, int, KernelCoeffs<T11>, int, int, const T5 *, const T8 *, const T7 *, const T9 *, long, const T9 *, T5, long, T10 *, T5, long)","1","7","(128, 1, 1)","(103, 1, 1)","0","8.9","Command line profiler metrics","smsp__thread_inst_executed.sum","inst","9,406,088"

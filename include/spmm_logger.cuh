@@ -1,10 +1,4 @@
 
-
-
-
-
-// ###########################BSA_SPMM###################################
-
 #pragma once
 
 #include "option.h"
@@ -68,69 +62,52 @@ public:
 
     void save_logfile()
     {
+        // 파일이 없거나 비어있으면 헤더 추가
+        std::ifstream check(outfile);
+        bool need_header = !check.good() || check.peek() == std::ifstream::traits_type::eof();
+        check.close();
+
         std::ofstream fout;
         fout.open(outfile, std::ios_base::app);
 
-        // string header = "matrix,avg_reordering_time,avg_csr_spmm_time,avg_bellpack_spmm_time,avg_total_time,avg_density_of_tiles,num_tiles,nnz_in_bellpack,nnz_in_csr,cluster_cnt,n_cols,rows,cols,block_size,method";
-        // fout << header << endl;
-        
+        if (need_header) {
+            fout << "infile,repetitions,N,M,K,NNZ,density,sparsity,MU,MAX,STD_NNZ,MAX_MU,AVE_BW,STD_BW,"
+                << "cusparse_time,ginkgo_time,kokkos_time,"
+                << "cusparse_error,ginkgo_error,kokkos_error,"
+                << "cusparse_result,ginkgo_result,kokkos_result,winner\n";
+        }
+
         float sparsity = 1 - density;
 
-        fout << infile << ",";
-        fout << repetitions << ",";
-
-        fout << N << ",";
-
-        fout << M << ",";
-        fout << K << ",";
-
-        fout << NNZ << ",";
-        fout << density << ",";
-        fout << sparsity << ",";
-        fout << MU << ",";
-        fout << MAX << ",";
-        fout << STD_NNZ << ",";
-        fout << MAX_MU << ",";
-        fout << AVE_BW << ",";
-        fout << STD_BW << ",";
-
-        fout << cusparse_time << ",";
-        fout << ginkgo_time << ",";
-        fout << kokkos_time << ",";
-        fout << cusparse_error << ",";
-        fout << ginkgo_error << ",";
-        fout << kokkos_error << ",";
-
-        if(cusparse_result == RESULTS::SUCCESS)
-            fout << "success,";
-        else
-            fout << "failure,";
-        
-        if(ginkgo_result == RESULTS::SUCCESS)
-            fout << "success,";
-        else
-            fout << "failure,";
-
-        if(kokkos_result == RESULTS::SUCCESS)
-            fout << "success,";
-        else
-            fout << "failure,";
-
-        switch (winner)
-        {
-        case METHODS::CUSPARSE:
-            fout << "cusparse" << endl;
-            break;
-        case METHODS::GINKGO:
-            fout << "ginkgo" << endl;
-            break;
-        case METHODS::KOKKOS:
-            fout << "kokkos" << endl;
-            break;
-        default:
-            fout << "unknown" << endl;
-            break;
-        }
-    
+        fout << infile << ","
+            << repetitions << ","
+            << N << ","
+            << M << ","
+            << K << ","
+            << NNZ << ","
+            << density << ","
+            << sparsity << ","
+            << MU << ","
+            << MAX << ","
+            << STD_NNZ << ","
+            << MAX_MU << ","
+            << AVE_BW << ","
+            << STD_BW << ","
+            << cusparse_time << ","
+            << ginkgo_time << ","
+            << kokkos_time << ","
+            << cusparse_error << ","
+            << ginkgo_error << ","
+            << kokkos_error << ","
+            << (cusparse_result == RESULTS::SUCCESS ? "success" : "failure") << ","
+            << (ginkgo_result   == RESULTS::SUCCESS ? "success" : "failure") << ","
+            << (kokkos_result   == RESULTS::SUCCESS ? "success" : "failure") << ","
+            << (winner == METHODS::CUSPARSE ? "cusparse" :
+                winner == METHODS::GINKGO   ? "ginkgo"   : "kokkos") << "\n";
     }
+
+
+
+
 };
+
