@@ -170,7 +170,17 @@ python3 ./Roofline/draw_Roofline.py
 
 ---
 
-## 9. References
+## 9. Acknowledgements
+This repository is based on research conducted at Chung-Ang University HPC Lab.
+The original work was published as:
+
+> Inseo Kim, Jinsung Kim. "Performance Evaluation of Sparse Matrix–Matrix Multiplication Kernels Using a Hierarchical Roofline Model." ICTC 2025.
+
+This repository presents an improved methodology with corrected hardware constants and metrics based on Luo et al. (arXiv:2402.13499).
+
+---
+
+## 10. References
  
 - Nan Ding, Samuel Williams. "An Instruction Roofline Model for GPUs." IPDPSW, 2019.
 - Weile Luo et al. "Benchmarking and Dissecting the Nvidia Hopper GPU Architecture." arXiv:2402.13499, 2024.
